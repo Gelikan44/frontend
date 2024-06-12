@@ -1,0 +1,4 @@
+.app .document__img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+}

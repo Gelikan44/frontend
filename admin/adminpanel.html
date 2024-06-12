@@ -1,0 +1,179 @@
+<?php
+include 'php/config.php';
+header('Content-type: text/html; charset=utf-8');
+session_start();
+if (! $_SESSION['admin'])
+header('Location: admin.php');
+$proj_result = mysqli_query($conn,"SELECT * FROM project");
+$news_result = mysqli_query($conn,"SELECT * FROM news");
+$dogs_result = mysqli_query($conn,"SELECT * FROM dogs");
+$cats_result = mysqli_query($conn,"SELECT * FROM cats");
+$history_result = mysqli_query($conn,"SELECT * FROM history");
+$users_result = mysqli_query($conn,"SELECT * FROM Users");
+if($ss=mysqli_num_rows($proj_result) >= 1) {
+              while($proj_array = mysqli_fetch_array($proj_result)) {
+                  $proj .= " <div class='tr' valign='top'><a class='' href='edit_proj.php?id=$proj_array[id]'>$proj_array[id] |
+                                     $proj_array[name_proj]</a></div>";
+              }
+          }
+
+if($s=mysqli_num_rows($news_result) >= 1) {
+              while($news_array = mysqli_fetch_array($news_result)) {
+                  $news .= " <div class='tr' valign='top'><a class='' href='edit_news.php?id=$news_array[id]'>$news_array[id] |
+                                     $news_array[name_news]</a></div>";
+              }
+          }
+
+if($sss=mysqli_num_rows($dogs_result) >= 1) {
+              while($dogs_array = mysqli_fetch_array($dogs_result)) {
+                  $dogs .= " <div class='tr' valign='top'><a class='' href='edit_dogs.php?id=$dogs_array[id]'>$dogs_array[id] |
+                                     $dogs_array[name_dog]</a></div>";
+              }
+          }
+
+if($ssss=mysqli_num_rows($cats_result) >= 1) {
+              while($cats_array = mysqli_fetch_array($cats_result)) {
+                  $cats .= " <div class='tr' valign='top'><a class='' href='edit_cats.php?id=$cats_array[id]'>$cats_array[id] |
+                                     $cats_array[name_cat]</a></div>";
+              }
+          }
+if($sssss=mysqli_num_rows($history_result) >= 1) {
+              while($history_array = mysqli_fetch_array($history_result)) {
+                  $history .= " <div class='tr' valign='top'><a class='' href='edit_history.php?id=$history_array[id]'>$history_array[id] |
+                                     $history_array[name_history]</a></div>";
+              }
+          }
+if($ssssss=mysqli_num_rows($users_result) >= 1) {
+              while($users_array = mysqli_fetch_array($users_result)) {
+                  $users .= " <div class='tr' valign='top'><a class='' href='edit_user.php?id=$users_array[id]'>$users_array[id] |
+                                     $users_array[login]</a></div>";
+              }
+          }
+?>
+
+<style>
+  body {
+    background: url('../bfbbim/local/templates/a/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+    }
+</style>
+
+<link href="local/templates/a/css/php.css" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<div class ='wrapper'>
+<div class='tables1'>
+    <div class ='tables11'> 
+        
+                <div class="zag" align = center >
+                       ПРОЕКТЫ ФОНДА
+                </div> 
+        <?php
+        
+          echo ''.$proj.'';
+        
+             ?>
+             
+                <div  class = "button" valign = top>
+                    <button class="b1" ><a href="add_proj2.php">
+                        Добавить
+                        </a>
+                    </button>
+                </div>
+    </div>
+                    
+    <div class ='tables11'> 
+        
+                <div class="zag" align = center >
+                      НОВОСТИ
+                </div> 
+               <?php
+        echo ''.$news.'';
+        
+        ?>
+                <div class = "button" valign = top>
+                    <button class="b1" >
+                        <a href ="add_news.php">
+                        Добавить
+                            </a>
+                     </button>
+                </div>        
+    </div>
+    <div class ='tables11'> 
+        
+                <div class="zag" align = center >
+                      Счастливые истории
+                </div> 
+               
+                
+                        <?php
+                    echo ''.$history.'';
+                    ?>
+                
+                <div class = "button" valign = top>
+                    <button  class="b1">
+                       <a href="add_history.php">
+                        Добавить
+                           </a>
+                     </button>
+                </div>       
+    </div>
+</div>    
+<div class='tables2'>
+    <div class ='tables11'> 
+                <div class="zag" align = center >
+                      Собаки
+                </div> 
+                 
+                <?php
+        echo ''.$dogs.'';
+        
+        ?> 
+                <div class = "button" valign = top>
+                    <button  class="b1">
+                         <a href="add_dogs.php">
+                       Добавить
+                             </a>
+                     </button>
+                </div> 
+    </div>
+    <div class ='tables11'> 
+        
+                <div class="zag" align = center >
+                      Семейство кошачих
+                </div> 
+                
+                <?php
+        echo ''.$cats.'';
+        
+        ?>
+                <div class = "button" valign = top>
+                    <button class="b1" >
+                        <a href="add_cats.php">
+                        Добавить
+                            </a>
+                     </button>
+                </div>       
+    </div>
+    
+    <div class ='tables11'> 
+        
+                <div class="zag" align = center >
+                      Администраторы 
+                </div> 
+                
+                <?php
+        echo ''.$users.'';
+        
+        ?>
+                <div class = "button" valign = top>
+                    <button class="b1" >
+                        <a href="add_user.php">
+                        Добавить
+                            </a>
+                     </button>
+                </div>       
+    </div>
+</div>
+</div>

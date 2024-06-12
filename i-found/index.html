@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="common" lang="ru">
+
+<head>
+	<title>Я нашёл животное, что делать?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../local/templates/a/css/style.css@ver=17.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer=""></script>
+    <script src="../local/templates/a/js/_fancybox-min.js" defer=""></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Помогаем муниципальным и частным приютам, пристраиваем и социализируем животных" />
+<link href="../local/templates/a/components/bitrix/search.title/1/style.css@170960760976.css" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script>if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script>(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script src="../bitrix/js/main/core/core.js@1709606488494198"></script>
+
+<script>BX.Runtime.registerExtension({'name':'main.core','namespace':'BX','loaded':true});</script>
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script>BX.Runtime.registerExtension({'name':'fx','namespace':'window','loaded':true});</script>
+<script>(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1713471934','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'1176d0099a35715dab9434e1056ce213'});</script>
+
+
+<script src="../bitrix/js/main/core/core_fx.js@170960648816888"></script>
+<script src="../bitrix/js/yandex.metrika/script.js@17118880476603"></script>
+            <script type="text/javascript">
+                window.dataLayerName = 'dataLayer';
+                var dataLayerName = window.dataLayerName;
+            </script>
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+                (function (m, e, t, r, i, k, a) {
+                    m[i] = m[i] || function () {
+                        (m[i].a = m[i].a || []).push(arguments)
+                    };
+                    m[i].l = 1 * new Date();
+                    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+                })
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                ym("92105288", "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    ecommerce: dataLayerName,
+                    params: {
+                        __ym: {
+                            "ymCmsPlugin": {
+                                "cms": "1c-bitrix",
+                                "cmsVersion": "23.900",
+                                "pluginVersion": "1.0.8",
+                                'ymCmsRip': 1597463007                            }
+                        }
+                    }
+                });
+
+                document.addEventListener("DOMContentLoaded", function() {
+                                    });
+
+            </script>
+            <!-- /Yandex.Metrika counter -->
+                    <script type="text/javascript">
+            window.counters = ["92105288"];
+        </script>
+        
+<script>window[window.dataLayerName] = window[window.dataLayerName] || [];</script>
+
+
+
+<script src="../bitrix/components/bitrix/search.title/script.js@17096065769847"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "f81faa2375294663e0e129f2a7c80887"]); _ba.push(["host", "www.kotodetki.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+</head>
+
+<body class="common__body">
+    <div class="app">
+        <header class="header">
+	<a STYLE="DISPLAY:NONE;" class="header__sticker sticker" href="../index.html"><i class="icon icon-cat color-alt1"></i><span>Я нашёл животное что делать?</span></a>
+            <div class="header__inner">
+                <input class="header__menu-activation" id="header-menu-activation" type="checkbox"><a class="header__logo" href="../index.html"><img src="../local/templates/a/img/logo.png" alt=""></a>
+                <div class="header__main">
+
+                    
+                    <nav class="header__menu">
+
+	
+	
+		                        <div class="header__menu-i"><a href="../about/index.html">О фонде</a></div>
+		
+	
+	
+
+	
+	
+		                        <div class="header__menu-i"><a href="../history/looking/index.html">Ищут дом</a></div>
+		
+	
+	
+
+	
+	
+		                       
+		                        
+		
+	
+	
+
+	
+	<div class="header__menu-i"><a href="../history/happy/index.html">Счастливые истории</a></div>
+		                                           </nav>                    <div class="social"><a class="social__i" href="mailto:bfbbim@gmail.com"><i class="icon icon-email"></i></a><a class="social__i" href="https://www.youtube.com/@user-xm2be5zu6x"><i class="icon icon-yb"></i></a><a class="social__i" href="https://vk.com/bfbbim"><i class="icon icon-vk"></i></a></div>
+                    <div class="header__btns"><a class="btn main _mini" href="help/index.html">Хочу помочь<i class="icon icon-heart"></i></a></div>
+                </div>
+                <label class="header__menu-btn" for="header-menu-activation"><i class="icon icon-menu"></i></label>
+            </div>
+        </header>
+        <main class="main">
+	<div class="guide-page">
+                <section class="section">
+                    <div class="section__banner _high">
+                        <div class="inner">
+                            <h1 class="h1 color6">Я нашёл животное на улице, <span class="color-alt3">что делать?</span></h1>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="section inner _pb-12 _pt-12">
+                    <div class="section__title _centered _huge">
+                        <h2 class="h2">Первым делом ищем на теле животного <span class="color2">опознавательные знаки</span></h2>
+                    </div>
+                    <div class="blist">
+                        <div class="blist__main">
+                            <ol class="list _limited-w2 _big-gap">
+	                                <li id="bx_3218110189_1402">
+                                    <div class="h6">Адресник</div>
+                                    <p>жетон или капсула, или надпись на ошейнике с телефоном хозяина. Аккуратно придержите животное и позвоните по указанному номеру</p>
+                                </li>
+	                                <li id="bx_3218110189_109">
+                                    <div class="h6">Клеймо</div>
+                                    <p>Беспородных животных не клеймят, есть только у породистых животных. татуировка синего цвета в ухе животного или в паху &#40;на животе&#41;. Обычно это буквы и цифры. Чтобы клеймо лучше читалось – смочите его растительным маслом. В базе клейм РКФ в интернете можно найти контакты клуба и через клуб сообщить о нахождении животного хозяину</p>
+                                </li>
+	                                <li id="bx_3218110189_108">
+                                    <div class="h6">Чип</div>
+                                    <p>Его можно обнаружить только в ветеринарной клинике специальным считывателем, так как он находится в&nbsp;районе холки или лопатки животного под кожей. При обнаружении чипа считыватель пищит и показывает номер животного. По базе чипов можно найти хозяина.</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="blist__gallery _high"><img src="../local/templates/a/img/guide/img1.png" alt="" loading="lazy"><img src="../local/templates/a/img/guide/img2.png" alt="" loading="lazy"></div>
+                    </div>
+                    <div class="section__title">
+                        <h2 class="h3">Если животное породистое, чип может помочь определить <span class="color2">настоящего хозяина, а не мошенника</span>, который хочет нажиться на породе</h2>
+                    </div>
+                </section>                <div class="section bg-alt1 _bordered _pt-12 _pb-8 _mb-12">
+                    <div class="inner">
+	                        <section class="section _pb-8" id="bx_651765591_107">
+                            <div class="section__title _centered _big">
+                                <div class="h3">Что делать, если животное сбила машина, оно покалечено или явно болеет?</div>
+                                <h2 class="h2 color3 arrowed">Нужен ветеринар. <br>Не ждите! Действуйте!<i class="icon icon-arrow2 color2"></i></h2>
+                            </div>
+                            <div class="about _5-2-4 row">
+                                <div class="text-block _big-font">
+                                    <p>Первое, что нужно сделать – отвезти животное к ветеринару, это может быть ближайшая специализированная клиника с&nbsp;круглосуточным стационаром.</p>
+                                    <p><b class="color3">Самый простой способ найти ветеринарную клинику</b> – в Яндекс Навигаторе вбить «ветклиника» и обзвонить ближайшие, телефон и адрес также можно найти в&nbsp;навигаторе</p>
+                                </div>
+                                <div class="about__img icons-decor">
+				<img class="_left" src="../upload/iblock/f46/5vyegol0bhrtfkl0z7pwki8nuqkd23jx.png" alt="" loading="lazy">
+				</div>
+                            </div>
+                        </section>
+	                        <section class="section" id="bx_1373509569_106">
+                            <div class="section__title _centered _small">
+                                <h2 class="h2">Животному нужна срочная медицинская помощь, но <span class="color3">оно не&nbsp;дается в руки</span></h2>
+                            </div>
+                            <div class="info-cards">
+                                <div class="text-block _no-indent _big-font _small">
+                                    <h4>Воспользуйтесь услугами ловца</h4>
+                                    <p>Ловцы помогут отловить и отвезти в&nbsp;клинику животное. Важно заранее договориться с&nbsp;клиникой, что вы
+привезете животное. Ловцы отлавливают животных с&nbsp;помощью котоловки или снотворного дротика без&nbsp;вреда для животного
+
+</p>
+                                </div>
+                              
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <section class="section _pb-12 inner">
+                    <div class="section__title _small">
+			                        <div class="h3">На животном нет опознавательных знаков, и оно <span class="color4">не нуждается в&nbspэкстренной медицинской помощи?</span></div>
+                        <div class="text-block _tiny _no-indent arrowed"><i class="icon icon-arrow3 color4" style="font-size:8rem;transform:translateY(-25%) rotate(-13.5deg)"></i>
+                            <h4>Нужно сдать первичные анализы</h4>
+                            <p>Так будет понятно можно ли пристроить животное в семью, где есть другие питомцы</p>
+                        </div>                    </div>
+                    <div class="info-cards">
+	                        <div class="info-card bg-w text-block _similar-indent bg-alt2" id="bx_3485106786_105">
+                            <h4>Котята и взрослые коты</h4>
+				                            <ul>
+                                <li>Методом ПЦР</li>
+                                <li>Вирусный ринотрахеит</li>
+                                <li>Коронавирусный гастроэнтерит</li>
+                                <li>если вы нашли котенка старше 5-6 месяцев, то нужно сдать анализ на лейкоз и иммунодефицит, у котят младше такие анализы могут быть недостоверными</li>
+                            </ul>                        </div>
+	                        <div class="info-card bg-w text-block _similar-indent bg-alt1" id="bx_3485106786_104">
+                            <h4>Щенки и взрослые собаки</h4>
+				                            <ul>
+                                <li>Парвовирусный энтерит</li>
+                                <li>Чума плотоядных</li>
+                                <li>Коронавирус</li>
+                                <li>Лямблиоз</li>
+                            </ul>                        </div>
+                        <div class="icons-decor _rigth-2-row _mob-inner">
+			<img src="../upload/iblock/0a2/3aqpc6h83qxlkrobabd1cvqjmchrfd5h.png" alt="" loading="lazy">
+			</div>
+                    </div>
+                </section>                                <div class="section bg-alt1 _bordered _pt-8 _pb-8 _mb-12" id="bx_565502798_100">
+                    <div class="inner">
+                        <section class="section _pb-4">
+                            <div class="section__title _centered _big">
+                                <div class="h3">Анализы готовятся около 3-5 дней, в это время вы можете забрать животное домой, если у вас нет других питомцев</div>
+                            </div>
+                            <div class="about _6-1-5 row"><img class="_right" src="../upload/iblock/0eb/9skq621n2r7kyu0aef5oxtv6s7p5xo3m.png" alt="" loading="lazy">
+                                <div class="text-block">
+					<h4><b class="color4">Если у вас нет возможности взять животное домой</b> (у всех нас есть свои обстоятельства этого не делать: свои животные, аллергия или злой муж-жена), то:</h4>
+                                    <p>Есть такие варианты, как оставить животного в&nbsp;стационаре ветеринарной клиники, отдать на&nbsp;передержку, в зоогостиницу или отдать на время друзьям</p>                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="about _6-1-5 row">
+                                <h2 class="h2">Пока животное во временном доме:</h2>
+                                <div class="text-block _no-indent">
+					                                    <ul class="list">
+                                        <li>
+                                            <h6>Расклеивайте бумажные объявления</h6>
+                                            <p>в том месте, где вы нашли животное и на близлежащих улицах</p>
+                                        </li>
+                                        <li>
+                                            <h6>Опубликуйте пост в своих социальных сетях </h6>
+                                            <p>с фотографией животного<b class="color4"> и попросите делать репосты своих друзей, знакомых и близких</b></p>
+                                        </li>
+                                        <li>
+                                            <h6>Найдите районные чаты и группы в Telegram и Whatsapp</h6>
+                                            <p> и опубликуйте пост с фотографией животного</p>
+                                        </li>
+                                        <li>
+                                            <h6>Регулярно просматривайте объявления</h6>
+                                            <p> о потерянных животных на специализированных сайтах, в&nbsp;районных чатах и группах</p>
+                                        </li>
+                                    </ul>                                    <h4 class="color4">В объявлениях обязательно указываем номер телефона</h4>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+	                <section class="section _pb-12 inner" id="bx_1454625752_99">
+                    <div class="section__title _big">
+                        <h2 class="h2">Я нашел настоящего хозяина животного, но он отказывается от питомца. <span class="color3">Что делать?</span></h2>
+                    </div>
+                    <div class="blist _alt-color _5-7">
+                        <div class="blist__main">
+                            <div class="text-block _mini">
+                                <h4>Получите от владельца животного <span class="color3">письменный отказ от питомца</span> с датой, подписью и паспортными данными. В дальнейшем письменный отказ обезопасит вас от&nbsp;спорных ситуаций</h4>
+                            </div>
+                        </div>
+                        <div class="blist__gallery _low _narrow"><img src="../upload/iblock/300/hry9yxybw34dbo7txf37xg9jhz24ncpz.png" alt="" loading="lazy"><img src="../upload/iblock/7d2/byxkctovx8duay2le7pmaf01c3by6vmw.png" alt="" loading="lazy"></div>
+                    </div>
+                </section>
+	                <section class="section _pt-8 _pb-8 _bordered bg2 _mb-12 inner" id="bx_3322728009_98">
+                    <div class="section__title _centered color6">
+                        <h2 class="h2">Как искать <span class="color-alt3">нового хозяина?</span></span></h2>
+                        <div class="text-block _middle">
+                            <h4>Активируйтесь и задействуйте все возможности для поиска дома животному</h4>
+                        </div>
+                    </div>
+                    <div class="step-list">
+                        <div class="step-list__item bg-alt1 icons-decor _mob-inner _mob-small">Подавайте объявления в&nbsp;местные газеты</div>
+			                        <div class="step-list__item bg-alt3">Расклеивайте объявления с&nbsp;фотографией животного на&nbsp;районе</div>
+                        <div class="step-list__item bg-alt2 icons-decor _mob-inner _mob-small">Публикуйте посты в своих социальных сетях и <b>просите друзей, знакомых и&nbsp;близких сделать репосты</b></div>
+                    </div>
+                </section>
+	                <div class="inner" id="bx_2970353375_97">
+                    <section class="section banner _alt _pt-8 _pb-8 _mb-8 bg-alt8 _bordered">
+                        <div class="banner__main">
+                            <h2 class="h3">Наш фонд всячески помогает всем, кто <span class="color4">решился начать пристраивать животное</span></h2>
+                            <div class="text-block _mini">
+                                <h6>Пишите на почту: bfbbim@gmail.com</h6>
+                            </div>
+                            <div class="banner__btn"><i class="icon icon-arrow3 color4"></i><a class="btn _color1 _medium" href="mailto:bfbbim@gmail.com">Написать на почту</a></div>
+                        </div>
+                        <div class="banner__img _fill icons-decor"><img src="../upload/iblock/ab9/dlg7qrinchm4kbntq6vqtb20hp9c3s5d.jpg" alt="" loading="lazy"></div>
+                    </section>
+                </div>
+
+	</div>
+        </main>
+       <footer class="footer">
+            <div class="footer__inner inner">
+                <div class="footer__main">
+                    <div class="footer__col"><a class="footer__logo" href="index.html"><img src="../local/templates/a/img/logo.png" alt=""></a>
+                        <div class="footer__links">Благотворительный фонд помощи бездомным животным «Белый Бим»</div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">Меню</div>
+                        <nav class="footer__menu">
+
+	
+	
+							<a class="footer__menu-i" href="../../../index.html">О фонде</a>
+			
+	
+	
+
+	
+	
+							<a class="footer__menu-i" href="../../../history/looking/index.html">Ищут дом</a>
+			
+	
+	
+
+	
+	
+		                          
+	
+							
+			
+	
+	
+
+	
+	
+		                            
+		
+	
+	
+
+	
+	
+							<a href="../../../history/happy/index.html">Счастливые истории</a>
+			
+	
+	
+
+	
+	
+							
+			
+	
+	
+
+	                        </nav>                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">Контакты</div>
+                        <div class="footer__menu">
+                            <p>По любым вопросам:<br><a href="mailto:info@kotodetki.ru">bfbbim@gmail.com</a></p><a href="tel:+(4942) 50 47 31">(4942) 50 47 31</a>
+                        </div>
+                        <div class="footer__social">
+                            <div class="social _alt _large">
+				<a class="social__i" href="https://vk.com/bfbbim"><i class="icon icon-vk"></i></a>
+				<a class="social__i" href="https://www.youtube.com/@user-xm2be5zu6x"><i class="icon icon-yb"></i></a>
+			    </div>
+                        </div>
+                    </div>
+                    <div class="footer__btns"><a class="btn _color4 _mini" href="help/index.html">Хочу помочь</a><a class="btn _border-alt _mini" href="volonter/index.html">Стать волонтером</a></div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__links">
+			</div>
+                    <div class="footer__col _centered"><img ><small>© 2016-2024 «Белый Бим».</small></div>
+                    <div class="footer__links _right"></div>
+                </div>
+            </div>
+        </footer>
+        <script src="../local/templates/a/js/_swiper-bundle-min.js" defer=""></script>
+        <script src="../local/templates/a/js/script-min.js@ver=17" defer=""></script>
+
+
+        <div class="popup" data-popup="report">
+            <div class="popup__scroll">
+                <div class="popup__content _limited-w-l">
+                    <div class="popup__btns"><a class="btn _color5 _medium" href="index.html">Финансовый отчет</a><a class="btn _color5 _medium" href="index.html">Содержательный отчет</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" data-popup="donate">
+            <div class="popup__scroll">
+                <div class="popup__content _alt-bg _limited-w-m">
+                    <div class="popup__close"><i class="icon icon-close2"></i></div>
+                    <form class="form" action="https://www.kotodetki.ru/local/best2pay/pay.php">
+                        <div class="form__group">
+                            <div class="donate-form _alt">
+                                <label class="input-btn">
+                                    <input type="radio" name="amount_checkbox" value="200"><span class="input-btn__mask">200 р.</span>
+                                </label>
+                                <label class="input-btn">
+                                    <input type="radio" name="amount_checkbox" value="500"><span class="input-btn__mask">500 р.</span>
+                                </label>
+                                <label class="input-btn">
+                                    <input type="radio" name="amount_checkbox" value="700"><span class="input-btn__mask">700 р.</span>
+                                </label>
+                                <label class="input-btn">
+                                    <input type="radio" name="amount_checkbox" value="1500"><span class="input-btn__mask">1500 р.</span>
+                                </label>
+                                <label class="input-btn _2-col">
+                                    <input type="number" placeholder="Другая сумма" name="amount_string">
+                                </label>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" name="recur"><span class="toggle__mask"></span><span class="toggle__label">Помогать ежемесячно</span>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__label">Заполните, пожалуйста, контактные данные, чтобы мы могли отправить вам чек пожертвования</div>
+                            <div class="form__row">
+                                <input class="input _bordered" type="text" name="name" placeholder="Ваше имя">
+                                <input class="input _bordered" type="email" name="email" placeholder="Ваша электронная почта">
+                            </div>
+                            <label class="checkbox _alt">
+                                <input type="checkbox" required><span class="checkbox__mask"></span>
+                                <div class="checkbox__label">Согласен с офертой и на обработку персональных данных</div>
+                            </label>
+                        </div>
+<input type="hidden" name="pet" value="" />
+<input type="hidden" name="runner" value="" />
+<input type="hidden" name="looking" value="" />
+<input type="hidden" name="desc" value="" />
+                        <button class="btn _full">Помочь</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- CLEANTALK template addon -->
+<!--'start_frame_cache_cleantalk_frame'--><script data-skip-moving = 'true'>
+                    var ct_checkjs_val = '1646e575aca5e2f6e6a007718e45c5e4', ct_date = new Date(), 
+                    ctTimeMs = new Date().getTime(),
+                    ctMouseEventTimerFlag = true, //Reading interval flag
+                    ctMouseData = [],
+                    ctMouseDataCounter = 0;
+
+                    function ctSetCookie(c_name, value) {
+                        document.cookie = c_name + '=' + encodeURIComponent(value) + '; path=/';
+                    }
+
+                    ctSetCookie('ct_ps_timestamp', Math.floor(new Date().getTime()/1000));
+                    ctSetCookie('ct_fkp_timestamp', '0');
+                    ctSetCookie('ct_pointer_data', '0');
+                    ctSetCookie('ct_timezone', '0');
+
+                    ct_attach_event_handler(window, 'DOMContentLoaded', ct_ready);
+
+                    setTimeout(function(){
+                        ctSetCookie('ct_timezone', ct_date.getTimezoneOffset()/60*(-1));
+                        ctSetCookie('ct_checkjs', ct_checkjs_val);  
+                    },1000);
+
+                    /* Writing first key press timestamp */
+                    var ctFunctionFirstKey = function output(event){
+                        var KeyTimestamp = Math.floor(new Date().getTime()/1000);
+                        ctSetCookie('ct_fkp_timestamp', KeyTimestamp);
+                        ctKeyStopStopListening();
+                    }
+
+                    /* Reading interval */
+                    var ctMouseReadInterval = setInterval(function(){
+                        ctMouseEventTimerFlag = true;
+                    }, 150);
+                        
+                    /* Writting interval */
+                    var ctMouseWriteDataInterval = setInterval(function(){
+                        ctSetCookie('ct_pointer_data', JSON.stringify(ctMouseData));
+                    }, 1200);
+
+                    /* Logging mouse position each 150 ms */
+                    var ctFunctionMouseMove = function output(event){
+                        if(ctMouseEventTimerFlag == true){
+                            
+                            ctMouseData.push([
+                                Math.round(event.pageY),
+                                Math.round(event.pageX),
+                                Math.round(new Date().getTime() - ctTimeMs)
+                            ]);
+                            
+                            ctMouseDataCounter++;
+                            ctMouseEventTimerFlag = false;
+                            if(ctMouseDataCounter >= 100){
+                                ctMouseStopData();
+                            }
+                        }
+                    }
+
+                    /* Stop mouse observing function */
+                    function ctMouseStopData(){
+                        if(typeof window.addEventListener == 'function'){
+                            window.removeEventListener('mousemove', ctFunctionMouseMove);
+                        }else{
+                            window.detachEvent('onmousemove', ctFunctionMouseMove);
+                        }
+                        clearInterval(ctMouseReadInterval);
+                        clearInterval(ctMouseWriteDataInterval);                
+                    }
+
+                    /* Stop key listening function */
+                    function ctKeyStopStopListening(){
+                        if(typeof window.addEventListener == 'function'){
+                            window.removeEventListener('mousedown', ctFunctionFirstKey);
+                            window.removeEventListener('keydown', ctFunctionFirstKey);
+                        }else{
+                            window.detachEvent('mousedown', ctFunctionFirstKey);
+                            window.detachEvent('keydown', ctFunctionFirstKey);
+                        }
+                    }
+
+                    if(typeof window.addEventListener == 'function'){
+                        window.addEventListener('mousemove', ctFunctionMouseMove);
+                        window.addEventListener('mousedown', ctFunctionFirstKey);
+                        window.addEventListener('keydown', ctFunctionFirstKey);
+                    }else{
+                        window.attachEvent('onmousemove', ctFunctionMouseMove);
+                        window.attachEvent('mousedown', ctFunctionFirstKey);
+                        window.attachEvent('keydown', ctFunctionFirstKey);
+                    }
+                    /* Ready function */
+                    function ct_ready(){
+                      ctSetCookie('ct_visible_fields', 0);
+                      ctSetCookie('ct_visible_fields_count', 0);
+                      setTimeout(function(){
+                        for(var i = 0; i < document.forms.length; i++){
+                            var form = document.forms[i];
+                            if (form.action.toString().indexOf('/auth/?forgot_password') !== -1)  {
+                                continue;
+                            }
+                            form.onsubmit_prev = form.onsubmit;
+                            form.onsubmit = function(event){
+
+                                /* Get only fields */
+                                var elements = [];
+                                for(var key in this.elements){
+                                  if(!isNaN(+key))
+                                    elements[key] = this.elements[key];
+                                }
+
+                                /* Filter fields */
+                                elements = elements.filter(function(elem){
+
+                                    var pass = true;
+
+                                    /* Filter fields */
+                                    if( getComputedStyle(elem).display    === 'none' ||   // hidden
+                                        getComputedStyle(elem).visibility === 'hidden' || // hidden
+                                        getComputedStyle(elem).opacity    === '0' ||      // hidden
+                                        elem.getAttribute('type')         === 'hidden' || // type == hidden
+                                        elem.getAttribute('type')         === 'submit' || // type == submit
+                                        elem.value                        === ''       || // empty value
+                                        elem.getAttribute('name')         === null
+                                    ){
+                                    return false;
+                                    }
+
+                                    /* Filter elements with same names for type == radio */
+                                    if(elem.getAttribute('type') === 'radio'){
+                                        elements.forEach(function(el, j, els){
+                                        if(elem.getAttribute('name') === el.getAttribute('name')){
+                                            pass = false;
+                                            return;
+                                        }
+                                    });
+                                }
+
+                                return true;
+                            });
+
+                            /* Visible fields count */
+                            var visible_fields_count = elements.length;
+
+                            /* Visible fields */
+                            var visible_fields = '';
+                            elements.forEach(function(elem, i, elements){
+                              visible_fields += ' ' + elem.getAttribute('name');
+                            });
+                            visible_fields = visible_fields.trim();
+
+                            ctSetCookie('ct_visible_fields', visible_fields);
+                            ctSetCookie('ct_visible_fields_count', visible_fields_count);
+
+                            /* Call previous submit action */
+                            if(event.target.onsubmit_prev instanceof Function){
+                              setTimeout(function(){
+                                event.target.onsubmit_prev.call(event.target, event);
+                              }, 500);
+                            }
+                          };
+                        }
+                      }, 1000);
+                    }
+
+                    function ct_attach_event_handler(elem, event, callback){
+                      if(typeof window.addEventListener === 'function') elem.addEventListener(event, callback);
+                      else                                              elem.attachEvent(event, callback);
+                    }
+
+                    function ct_remove_event_handler(elem, event, callback){
+                      if(typeof window.removeEventListener === 'function') elem.removeEventListener(event, callback);
+                      else                                                 elem.detachEvent(event, callback);
+                    }
+                    
+                    if(typeof jQuery !== 'undefined') {
+
+            /* Capturing responses and output block message for unknown AJAX forms */
+            jQuery(document).ajaxComplete(function (event, xhr, settings) {
+              if (xhr.responseText && xhr.responseText.indexOf('"apbct') !== -1) {
+                try {
+                  var response = JSON.parse(xhr.responseText);
+                  if (typeof response.apbct !== 'undefined') {
+                    response = response.apbct;
+                    if (response.blocked) {
+                      alert(response.comment);
+                      if(+response.stop_script == 1)
+                        window.stop();
+                    }
+                  }                  
+                } catch (e) {
+                  return;
+                }
+
+              }
+            });
+            
+          }
+                    </script><!--'end_frame_cache_cleantalk_frame'--><!-- /CLEANTALK template addon -->
+</body>
+
+</html>

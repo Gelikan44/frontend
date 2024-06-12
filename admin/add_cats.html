@@ -1,0 +1,57 @@
+<?php
+include 'php/config.php';
+
+include 'php/add_cats_sql.php';
+
+
+?>
+<script>
+let input = document.getElementById('mytext');
+input.addEventListener('input', autoresize);
+
+function autoresize() {
+  let size = input.scrollWidth
+  input.style.width = size + 'px';
+  input.style.transition = "none";
+}
+    </script>
+<link href="local/templates/a/css/php.css" type="text/css"  data-template-style="true"  rel="stylesheet" />
+
+    <div class ='tables13'> 
+        <form action="" method="post" enctype="multipart/form-data" class='user-form'>
+        <div class="zag" align = center >
+          Семейство кошачих       
+        </div>
+            <button class="b1">
+         <a href="adminpanel.php">
+            Вернуться
+            </a>
+          </button>
+        <div class="text" valign="top">
+         Название:  <input type="text" name="name_cat">                     
+        </div> 
+        <div class="text" valign="top">
+         Описание: <textarea name='desc_cat'></textarea>                       
+        </div>
+        <div class="text" valign="top">
+            Пол:
+        <select name="gender_cat">
+	<option>Мальчик</option>
+	<option>Девочка</option>
+        </select>
+            </div>
+        <div class="text" valign="top">
+         Телефон: <input type="tel"  name="number_cat">                       
+        </div>
+        <div  class="text" valign=top>
+         Картинка: <input type="file" multiple name="img_cat">              
+        </div>
+        <div class = "button" valign = top>
+            <button name="add_cat_but" >
+                Добавить
+            </button>
+        </div>
+        </form>
+    </div>
+
+    

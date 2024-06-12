@@ -1,0 +1,12 @@
+.float-cat, .float-dog {
+    position: absolute !important;
+    top: 50% !important ;
+    bottom: 0 !important;
+    height: 2.6rem !important;
+    width: auto !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}

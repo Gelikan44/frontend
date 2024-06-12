@@ -1,0 +1,17 @@
+.text-block .no-decoration {
+	text-decoration: none !important;
+}
+
+.news__labels.cat > .label:last-child {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+.looking__zoocity-logo {
+	position: absolute;
+    max-width: 25%;
+    top: 5px;
+    right: 5px;
+}

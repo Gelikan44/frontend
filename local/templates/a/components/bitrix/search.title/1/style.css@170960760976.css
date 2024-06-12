@@ -1,0 +1,6 @@
+div.title-search-result {
+	display:none;
+	overflow:hidden;
+	z-index:205;
+}
+

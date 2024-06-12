@@ -1,0 +1,88 @@
+.wrapper {
+  	display: flex;
+  	width: 100%;
+  	height: 100%;
+  	margin-top: 15px;
+}
+
+.tables1 {
+    display: block;
+  	word-wrap: break-word;
+  	margin: 2px;
+  	width: 50%;	
+  	margin-left: 250px;
+}
+
+.tables2 {
+    display: block;
+
+  	margin: 2px;
+  	width: 50%;	
+ 	margin-right: 250px;
+}
+.tables11{
+    border: 2px solid black;
+    display: block;
+    margin-top: 15px;
+ 	width: 100%;	
+ 	table-layout: fixed;
+ 	word-wrap: break-word;
+ 	color:#333333;
+ 	font-weight: bold;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.tr{
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+	table-layout: fixed;
+ 	word-break: break-all;
+    min-height: 97px;
+	max-height: 97px;   
+}
+button{
+   
+}
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    
+
+}
+td{
+ 	word-wrap: break-word;
+	width: 100%;
+	height: 50%;
+}
+.zag{
+    background-color: #333333; 
+    color: #EBE8E7;
+}
+.tables13{
+    vertical-align: middle;
+    border: 2px solid black;
+    display: block;
+    margin-top: 30px;
+    margin-left: 30%;
+ 	width: 40%;	
+    min-height: 25%;
+ 	word-wrap: break-word;
+ 	color:#333333;
+ 	font-weight: bold;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.text{
+    margin: 10px;
+}
+.b1{
+    margin-top: 10px;
+    margin-left: 10px;
+    background: #333333;
+     color: #EBE8E7;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
